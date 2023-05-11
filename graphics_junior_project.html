@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+
+<html>
+	<head>
+		<title>Sejeong Park_Grahpics Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Graphics Project</h1>
+                            <h3>Team size: Personal Project<br>
+                                Used: C++  OpenGL GLSL</h3>
+
+                            <h2>Overview</h2>
+							<div align="center">
+								<iframe width="1000" height="700" src="https://www.youtube.com/embed/gCqtzcakhlA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+
+                            <hr>
+
+                            <h2>Description</h2>
+                            <blockquote>Environment Mapping</blockquote>
+                            <p style = "text-align: center; font-size:90%; color:black;">
+								This project shows Skybox and Environment Mapping(Reflection & Refraction).<br>
+								There is a main object which is rendered with environment map on it. And the other objects are rotating around the main object.
+								<br>There is UI for changing environment mapping: reflection, refraction and fresnel.
+								In the refraction part, the user can change the refraction index from 1.0 to 100.0.<br>
+								And also, there are pre-set materials for the refraction. For example, Air, Oil, Diamond and so on.
+							</p>
+
+							<span class="image main"><img src="images/graphics_environment/reflection.JPG" alt="" 
+                                style="display: block; margin:0px auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray;">
+								Only Reflection<br><br><br></p>
+
+                            <span class="image main"><img src="images/graphics_environment/refraction.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Only Refraction<br><br><br></p>
+
+							<span class="image main"><img src="images/graphics_environment/fresnel.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Fresnel<br><br></p>
+							
+							<hr>
+
+							<p style = "text-align: center; font-size:90%; color:black;">
+								The user also can change the blend factor for blending environment mapping and Phong shading.
+							</p>
+
+							<span class="image main"><img src="images/graphics_environment/phong shading.JPG" alt="" 
+                                style="display: block; margin:0px auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray;">
+								Phong Shading<br><br><br></p>
+
+							<span class="image main"><img src="images/graphics_environment/blending reflection.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Blending Environment Mapping and Phong Shading<br><br><br></p>
+
+							<hr>
+
+							<p style = "text-align: center; font-size:90%; color:black;">
+								The user can change Chromatic Abberation from 0.0 to 1.0.
+							</p>
+
+							<span class="image main"><img src="images/graphics_environment/chromatic aberration.JPG" alt="" 
+                                style="display: block; margin:0px auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray;">
+								Chromatic Aberration<br><br><br></p>
+
+							<hr>
+
+							<blockquote>Deferred Rendering</blockquote>
+							<p style = "text-align: center; font-size:90%; color:black;">
+								I implemented hybrid rendering pipeline that employs a Deferred Rendering method for the main object, coupled with the usual Forward Rendering for auxiliary rendering(debug draw, vertex, and face normals etc).
+								In the UI on the right side, User can see the individual render targets on Full Screen Quad.<br>
+								<br>
+								I implemented three ways of Shading: Phong Lighting, Phong Shading, and Blinn Shading.<br>
+								In Phong Lighting, Lightings computations are done in the vertex shader, and only the final color is interpolated to the fragment.
+								<br>Phong Shading is similar with Phong Lighting but the lightings computations are implemented in the fragment shader.
+								<br>Finally, Blinn Shading used half-vector between the light vector and view vector, and combine it with the surface normal for the specular computation. And the lighting computations are done in the framgent shader.
+								<br><br>
+								There are three lighting ways: Point light, Directional light and Spot light.
+							</p>
+
+							<span class="image main"><img src="images/graphics_engine/point light.JPG" alt="" 
+                                style="display: block; margin:0px auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray;">
+								Point Light<br><br><br></p>
+
+                            <span class="image main"><img src="images/graphics_engine/directional.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Directional Light<br><br><br></p>
+
+							<span class="image main"><img src="images/graphics_engine/spot.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Spot Light<br><br><br></p>
+							
+							<span class="image main"><img src="images/graphics_engine/spot light.JPG" alt="" 
+                                style="display: block; margin:0px auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray;">
+								Example of the Scenario<br><br><br></p>
+
+							<p style = "text-align: center; font-size:90%; color:black;">
+								The user can toggle about Visualize UV and calculating UVs on the CPU or GPU.
+								So the user can see the difference between calculating on the CPU and GPU.
+							</p>
+
+                            <span class="image main"><img src="images/graphics_engine/show uv.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Turn on the Visualize UV<br><br><br></p>
+
+							<span class="image main"><img src="images/graphics_engine/fog.JPG" alt="" 
+                                style="display: block; margin: 0 auto; width:900px;"/></span>
+							<p style="text-align: center; font-size:75%; font-family: courier; color: gray">
+								Fog<br><br></p>
+							
+							<hr>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
